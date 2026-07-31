@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enterprise AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ========================================= -->
+    <!-- Sidebar -->
+    <!-- ========================================= -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+
+            <h2>🏢 Enterprise AI</h2>
+
+            <p class="industry">
+                Manufacturing Industry
+            </p>
+
+            <div class="status">
+                🟢 Ollama Connected
+            </div>
+
+        </div>
+
+        <button id="newChat">
+            ➕ New Chat
+        </button>
+
+        <button id="uploadBtn">
+            📁 Upload Document
+        </button>
+
+        <input
+            type="file"
+            id="fileUpload"
+            accept=".pdf,.txt,.docx"
+            hidden
+        >
+
+        <hr>
+
+        <h3>📚 Knowledge Base</h3>
+
+        <div id="knowledgeBase" class="knowledge-list">
+
+            <div class="empty">
+                No documents uploaded.
+            </div>
+
+        </div>
+
+        <hr>
+
+        <h3>💬 Recent Chats</h3>
+
+        <div id="history" class="history">
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- Chat Area -->
+    <!-- ========================================= -->
+
+    <div class="chat-area">
+
+        <div id="messages" class="messages">
+
+            <div class="bot-message">
+
+                <strong>👋 Welcome to Enterprise AI</strong>
+
+                <br><br>
+
+                Upload a company PDF, SOP, manual or policy document.
+
+                <br><br>
+
+                Then ask questions about that document.
+
+            </div>
+
+        </div>
+
+        <div class="input-area">
+
+            <input
+                id="userInput"
+                type="text"
+                placeholder="Ask a question about your uploaded document..."
+            >
+
+            <button id="sendBtn">
+
+                Send
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
